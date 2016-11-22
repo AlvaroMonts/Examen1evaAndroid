@@ -1,2 +1,2 @@
-include ':myapplication4', ':mylibrary'
+include ':myapplication4', ':mylibrary', ':myapplication2'
 // , ':app', ':myapplication2'
