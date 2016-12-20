@@ -17,7 +17,6 @@ import java.util.HashMap;
  */
 public class MainActivityController implements View.OnClickListener, View.OnFocusChangeListener, QBAdminListener {
     MainActivity vista;
-    //Toast toast = Toast.makeText(this.vista, "El usuario y/o contraseña no son validos", Toast.LENGTH_SHORT);
 
     public MainActivityController(MainActivity vista) {
         this.vista = vista;
@@ -28,7 +27,7 @@ public class MainActivityController implements View.OnClickListener, View.OnFocu
     @Override
     public void onClick(View view) {
         if (vista.Login.isPressed()) {
-            vista.qbAdmin.login(vista.editText3.getText().toString(), vista.editText4.getText().toString());
+            vista.qbAdmin.login(vista.editText4.getText().toString(), vista.editText3.getText().toString());
         } else if (vista.Registro.isPressed()) {
             vista.qbAdmin.registrar(vista.editText2.getText().toString(), vista.editText.getText().toString());
         } else if (vista.atras2.isPressed()) {
@@ -50,10 +49,9 @@ public class MainActivityController implements View.OnClickListener, View.OnFocu
     @Override
     public void logeado(boolean bllogeado, QBUser user) {
         if (bllogeado) {
-            Toast toast2 = Toast.makeText(this.vista, "Deberia cambiar a parte 2", Toast.LENGTH_SHORT);
-            vista.finish();
+            
         } else {
-           // toast.show();
+            Toast toast = Toast.makeText(this.vista, "El usuario y/o contraseña no son validos", Toast.LENGTH_SHORT);
         }
     }
 
@@ -62,7 +60,7 @@ public class MainActivityController implements View.OnClickListener, View.OnFocu
         if (blregistrado) {
             vista.cambiarFragment(1);
         } else {
-         //   toast.show();
+            Toast toast = Toast.makeText(this.vista, "El usuario y/o contraseña no son validos", Toast.LENGTH_SHORT);
         }
     }
 }

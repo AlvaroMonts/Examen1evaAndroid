@@ -37,7 +37,7 @@
         android:layout_alignTop="@+id/textView2"
         android:layout_toRightOf="@+id/textView2"
         android:ems="10"
-        android:inputType="textPassword" />
+        android:inputType="text" />
 
 
     <EditText

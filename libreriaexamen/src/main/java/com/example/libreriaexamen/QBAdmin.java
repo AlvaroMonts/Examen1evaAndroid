@@ -74,7 +74,7 @@ public class QBAdmin {
 
             @Override
             public void onError(QBResponseException errors) {
-
+                System.out.println("Sesion no iniciada");
             }
         });
     }
