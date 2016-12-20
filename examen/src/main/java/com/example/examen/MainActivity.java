@@ -51,7 +51,8 @@ public class MainActivity extends AppCompatActivity {
         editText4 = (EditText) fragLog.getView().findViewById(R.id.editText4);
         atras2 = (Button) fragLog.getView().findViewById(R.id.atrasLog);
         Login = (Button) fragLog.getView().findViewById(R.id.login);
-        Registro.setOnClickListener(controlador);
+        controlador.toString();
+        Login.setOnClickListener(controlador);
         atras2.setOnClickListener(controlador);
         // registro
         editText = (EditText) fragReg.getView().findViewById(R.id.editText);
@@ -67,11 +68,11 @@ public class MainActivity extends AppCompatActivity {
         transaction = fm.beginTransaction();
         if(frag == 0) {
             // cambiar log a reg
-           // transaction.hide(fragLog);
+            transaction.hide(fragLog);
             transaction.show(fragReg);
         } else if(frag == 1) {
             // cambiar reg a log
-           // transaction.hide(fragReg);
+            transaction.hide(fragReg);
             transaction.show(fragLog);
         }
         transaction.commit();

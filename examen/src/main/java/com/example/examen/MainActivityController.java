@@ -17,17 +17,17 @@ import java.util.HashMap;
  */
 public class MainActivityController implements View.OnClickListener, View.OnFocusChangeListener, QBAdminListener {
     MainActivity vista;
-    Toast toast;
+    //Toast toast = Toast.makeText(this.vista, "El usuario y/o contraseña no son validos", Toast.LENGTH_SHORT);
 
     public MainActivityController(MainActivity vista) {
         this.vista = vista;
-        toast = Toast.makeText(this.vista, "El usuario y/o contraseña no son validos", Toast.LENGTH_SHORT);
+
     }
 
 
     @Override
     public void onClick(View view) {
-        if (view.getId() == vista.Login.getId()) {
+        if (vista.Login.isPressed()) {
             vista.qbAdmin.login(vista.editText.getText().toString(), vista.editText2.getText().toString());
         } else if (vista.Registro.isPressed()) {
             vista.qbAdmin.registrar(vista.editText.getText().toString(), vista.editText2.getText().toString());
@@ -54,7 +54,7 @@ public class MainActivityController implements View.OnClickListener, View.OnFocu
             Toast toast2 = Toast.makeText(this.vista, "Deberia cambiar a parte 2", Toast.LENGTH_SHORT);
             vista.finish();
         } else {
-            toast.show();
+           // toast.show();
         }
     }
 
@@ -63,7 +63,7 @@ public class MainActivityController implements View.OnClickListener, View.OnFocu
         if (blregistrado) {
             vista.cambiarFragment(1);
         } else {
-            toast.show();
+         //   toast.show();
         }
     }
 }
