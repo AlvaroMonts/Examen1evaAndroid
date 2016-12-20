@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         Registro.setOnClickListener(controlador);
         atras.setOnClickListener(controlador);
         cambiarFragment(0);
+        qbAdmin.startSesion();
     }
 
     public void cambiarFragment(int frag) {

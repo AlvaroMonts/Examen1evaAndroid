@@ -3,6 +3,8 @@ package com.example.libreriaexamen;
 import android.app.Activity;
 import android.os.Bundle;
 
+import com.quickblox.auth.QBAuth;
+import com.quickblox.auth.model.QBSession;
 import com.quickblox.core.QBEntityCallback;
 import com.quickblox.core.QBSettings;
 import com.quickblox.core.exception.QBResponseException;
@@ -59,6 +61,20 @@ public class QBAdmin {
             @Override
             public void onError(QBResponseException errors) {
                 listener.registrado(false);
+            }
+        });
+    }
+
+    public void startSesion(){
+        QBAuth.createSession(new QBEntityCallback<QBSession>() {
+            @Override
+            public void onSuccess(QBSession session, Bundle params) {
+                System.out.println("Sesion iniciada");
+            }
+
+            @Override
+            public void onError(QBResponseException errors) {
+
             }
         });
     }

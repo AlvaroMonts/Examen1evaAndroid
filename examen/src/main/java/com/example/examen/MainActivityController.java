@@ -28,10 +28,9 @@ public class MainActivityController implements View.OnClickListener, View.OnFocu
     @Override
     public void onClick(View view) {
         if (vista.Login.isPressed()) {
-            vista.qbAdmin.login(vista.editText.getText().toString(), vista.editText2.getText().toString());
+            vista.qbAdmin.login(vista.editText3.getText().toString(), vista.editText4.getText().toString());
         } else if (vista.Registro.isPressed()) {
-            vista.qbAdmin.registrar(vista.editText.getText().toString(), vista.editText2.getText().toString());
-            vista.cambiarFragment(1);
+            vista.qbAdmin.registrar(vista.editText2.getText().toString(), vista.editText.getText().toString());
         } else if (vista.atras2.isPressed()) {
             vista.cambiarFragment(0);
         } else if (vista.atras.isPressed()) {
