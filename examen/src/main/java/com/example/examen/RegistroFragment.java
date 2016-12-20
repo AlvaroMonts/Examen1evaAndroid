@@ -21,6 +21,7 @@ public class RegistroFragment extends Fragment {
     EditText editText;
     EditText editText2;
     Button Registro;
+    Button atras;
     MainActivity mainActivity;
 
     public RegistroFragment() {
@@ -33,15 +34,13 @@ public class RegistroFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_registro, container, false);
-        mainActivity = new MainActivity();
+        mainActivity = (MainActivity) getActivity();
         editText = (EditText) v.findViewById(R.id.editText);
         editText2 = (EditText) v.findViewById(R.id.editText2);
         Registro = (Button) v.findViewById(R.id.button);
+        atras = (Button) v.findViewById(R.id.button2);
         Registro.setOnClickListener(mainActivity.controlador);
-        /*
-        mainActivity = (MainActivity4) getActivity();
-        mainActivity.cambiarFragment(2);
-        */
+        atras.setOnClickListener(mainActivity.controlador);
         return v;
     }
 

@@ -21,6 +21,7 @@ public class LoginFragment extends Fragment {
     EditText editText;
     EditText editText2;
     Button Login;
+    Button atras;
     MainActivity mainActivity;
 
     public LoginFragment() {
@@ -33,15 +34,13 @@ public class LoginFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_login, container, false);
-        mainActivity = new MainActivity();
+        mainActivity = (MainActivity) getActivity();
         editText = (EditText) v.findViewById(R.id.editText);
         editText2 = (EditText) v.findViewById(R.id.editText2);
+        atras = (Button) v.findViewById(R.id.button2);
         Login = (Button) v.findViewById(R.id.button);
         Login.setOnClickListener(mainActivity.controlador);
-        /*
-        mainActivity = (MainActivity4) getActivity();
-        mainActivity.cambiarFragment(2);
-        */
+        atras.setOnClickListener(mainActivity.controlador);
         return v;
     }
 }

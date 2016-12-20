@@ -24,18 +24,18 @@
     <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.example.myapplication4.LoginFragment"
-        android:id="@+id/fragment"
+        android:name="com.example.examen.LoginFragment"
+        android:id="@+id/fragment2"
         android:layout_below="@+id/editText"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentStart="false"
         tools:layout="@layout/fragment_login" />
 
     <fragment
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:name="com.example.myapplication4.RegistroFragment"
-        android:id="@+id/fragment2"
+        android:name="com.example.examen.RegistroFragment"
+        android:id="@+id/fragment"
         android:layout_below="@+id/editText"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="false"

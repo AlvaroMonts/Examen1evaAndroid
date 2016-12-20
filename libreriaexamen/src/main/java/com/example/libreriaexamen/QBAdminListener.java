@@ -12,6 +12,6 @@ import java.util.HashMap;
 public interface QBAdminListener {
     public void logeado(boolean bllogeado, QBUser user);
     public void registrado(boolean blregistrado);
-    public void datosDescargados(ArrayList<QBBaseCustomObject> datos);
-    public void datosTablaIdiomaDescargado(HashMap<Integer, String> palabrasDescargadas);
+   // public void datosDescargados(ArrayList<QBBaseCustomObject> datos);
+  //  public void datosTablaIdiomaDescargado(HashMap<Integer, String> palabrasDescargadas);
 }

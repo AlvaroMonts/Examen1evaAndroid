@@ -62,7 +62,7 @@ public class QBAdmin {
             }
         });
     }
-
+/*
     public void selectTabla(String id_idioma) {
         QBRequestGetBuilder select = new QBRequestGetBuilder();
         select.eq("idioma", id_idioma);
@@ -83,5 +83,5 @@ public class QBAdmin {
 
             }
         });
-    }
+    }*/
 }

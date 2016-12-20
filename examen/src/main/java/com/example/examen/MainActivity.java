@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import com.example.examen.R;
+import com.example.libreriaexamen.QBAdmin;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     FragmentManager fm;
     FragmentTransaction transaction;
     MainActivityController controlador;
+    QBAdmin qbAdmin;
    // boolean cambiarMainActivity;
 
     @Override
@@ -25,20 +27,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
       //  cambiarMainActivity = false;
         controlador = new MainActivityController(this);
+        qbAdmin = new QBAdmin(controlador, this);
         fm = getSupportFragmentManager();
-        fragLog = (LoginFragment) fm.findFragmentById(R.id.fragment);
-        fragReg = (RegistroFragment) fm.findFragmentById(R.id.fragment2);
-
+        fragReg = (RegistroFragment) fm.findFragmentById(R.id.fragment);
+        fragLog = (LoginFragment) fm.findFragmentById(R.id.fragment2);
         cambiarFragment(0);
     }
 
     public void cambiarFragment(int frag) {
         transaction = fm.beginTransaction();
         if(frag == 0) {
-            transaction.hide(fragLog);
+            // cambiar log - reg
+            //transaction.hide(fragLog);
             transaction.show(fragReg);
         } else if(frag == 1) {
-            transaction.hide(fragReg);
+            // cambiar reg - log
+           // transaction.hide(fragReg);
             transaction.show(fragLog);
         }
         transaction.commit();
