@@ -34,11 +34,13 @@ public class MainActivityController implements View.OnClickListener, View.OnFocu
             vista.cambiarFragment(0);
         } else if (vista.atras.isPressed()) {
             vista.cambiarFragment(1);
-        }/* else if (vista.cambiarMainActivity) {
-            Intent i = new Intent(vista, LogeadoMainActivity.class);
-            vista.startActivity(i);
-            vista.finish();
-        }*/
+        } else if (vista.atras3.isPressed()) {
+            vista.cambiarFragment(5);
+        } else if (vista.b1.isPressed()) {
+            vista.qbAdmin.selectTabla(1);
+        }
+        // seria igual para los demas cada uno mandadonle su respectiva id (la misma que el numero del nombre de la variable button)
+
     }
 
     @Override
@@ -49,7 +51,7 @@ public class MainActivityController implements View.OnClickListener, View.OnFocu
     @Override
     public void logeado(boolean bllogeado, QBUser user) {
         if (bllogeado) {
-            
+            vista.cambiarFragment(2);
         } else {
             Toast toast = Toast.makeText(this.vista, "El usuario y/o contraseña no son validos", Toast.LENGTH_SHORT);
         }
@@ -62,5 +64,10 @@ public class MainActivityController implements View.OnClickListener, View.OnFocu
         } else {
             Toast toast = Toast.makeText(this.vista, "El usuario y/o contraseña no son validos", Toast.LENGTH_SHORT);
         }
+    }
+
+    @Override
+    public void datosTablaNoticiasTexto(HashMap<Integer, String> palabrasDescargadas) {
+        // aqui habria que poner los resultados del select en los texts views segun la id conseguida (la id tambien se pone)
     }
 }

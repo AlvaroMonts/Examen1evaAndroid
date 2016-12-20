@@ -40,4 +40,31 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="false"
         tools:layout="@layout/fragment_registro" />
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.example.examen.Fragment1"
+        android:id="@+id/fragment3"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        tools:layout="@layout/fragment_fragment1" />
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.example.examen.Fragment2"
+        android:id="@+id/fragment4"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        tools:layout="@layout/fragment_fragment2" />
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.example.examen.Fragment3"
+        android:id="@+id/fragment5"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="false"
+        tools:layout="@layout/fragment_fragment3" />
 </RelativeLayout>

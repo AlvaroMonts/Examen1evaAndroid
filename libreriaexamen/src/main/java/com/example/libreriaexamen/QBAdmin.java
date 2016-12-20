@@ -78,20 +78,20 @@ public class QBAdmin {
             }
         });
     }
-/*
-    public void selectTabla(String id_idioma) {
+
+    public void selectTabla(int id_cat) {
         QBRequestGetBuilder select = new QBRequestGetBuilder();
-        select.eq("idioma", id_idioma);
-        QBCustomObjects.getObjects("idioma", select, new QBEntityCallback<ArrayList<QBCustomObject>>() {
+        select.eq("idcategoria", id_cat);
+        QBCustomObjects.getObjects("noticiatexto", select, new QBEntityCallback<ArrayList<QBCustomObject>>() {
             @Override
             public void onSuccess(ArrayList<QBCustomObject> qbCustomObjects, Bundle bundle) {
                 HashMap<Integer, String> palabras = new HashMap<Integer, String>();
                 for (int a =0; a < qbCustomObjects.size(); a++) {
-                    String valor = qbCustomObjects.get(a).getFields().get("valor").toString();
-                    int id = (int) qbCustomObjects.get(a).getFields().get("idpalabra");
-                    palabras.put(id, valor);
+                    String texto = qbCustomObjects.get(a).getFields().get("noticiatexto").toString();
+                    int id = (int) qbCustomObjects.get(a).getFields().get("noticiaid");
+                    palabras.put(id, texto);
                 }
-                listener.datosTablaIdiomaDescargado(palabras);
+                listener.datosTablaNoticiasTexto(palabras);
             }
 
             @Override
@@ -99,5 +99,5 @@ public class QBAdmin {
 
             }
         });
-    }*/
+    }
 }
