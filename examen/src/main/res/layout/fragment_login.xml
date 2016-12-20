@@ -6,71 +6,69 @@
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
+        android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Contrasena"
-        android:id="@+id/textView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_gravity="center"
         android:layout_marginTop="300dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:text="Contrasena"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:text="Usuario"
-        android:id="@+id/textView"
-        android:layout_gravity="center"
-        android:layout_centerVertical="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_gravity="center"
+        android:text="Usuario"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
     <EditText
+        android:id="@+id/editText3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/editText"
+        android:layout_alignBaseline="@id/textView2"
+        android:layout_alignEnd="@+id/editText2"
+        android:layout_alignRight="@+id/editText2"
         android:layout_alignTop="@+id/textView2"
         android:layout_toRightOf="@+id/textView2"
-        android:layout_alignBaseline="@id/textView2"
-        android:layout_alignRight="@+id/editText2"
-        android:layout_alignEnd="@+id/editText2" />
+        android:ems="10"
+        android:inputType="textPassword" />
 
 
     <EditText
+        android:id="@+id/editText4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2"
-        android:layout_alignTop="@+id/textView"
-        android:layout_toRightOf="@+id/textView"
         android:layout_alignBaseline="@id/textView"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true" />
+        android:layout_alignTop="@+id/textView"
+        android:layout_toRightOf="@+id/textView" />
 
     <Button
+        android:id="@+id/login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login"
-        android:id="@+id/button"
-        android:layout_marginTop="49dp"
-        android:layout_below="@+id/editText"
         android:layout_alignLeft="@+id/editText2"
         android:layout_alignStart="@+id/editText2"
-         />
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="49dp"
+        android:text="Login" />
 
     <Button
+        android:id="@+id/atrasLog"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ir a Registro"
-        android:id="@+id/button3"
-        android:layout_alignTop="@+id/button"
-        android:layout_toRightOf="@+id/button"
-        android:layout_toEndOf="@+id/button"
+        android:layout_alignTop="@+id/login"
         android:layout_marginLeft="62dp"
         android:layout_marginStart="62dp"
-        />
+        android:layout_toEndOf="@+id/login"
+        android:layout_toRightOf="@+id/login"
+        android:text="Ir a Registro" />
 
 </RelativeLayout>

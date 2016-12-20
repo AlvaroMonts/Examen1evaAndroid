@@ -37,7 +37,7 @@ public class QBAdmin {
             @Override
             public void onSuccess(QBUser qbUser, Bundle bundle) {
                 listener.logeado(true, qbUser); // el qbuser de parametro de encima
-        }
+            }
 
             @Override
             public void onError(QBResponseException e) {

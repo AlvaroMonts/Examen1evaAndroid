@@ -18,13 +18,6 @@ import com.example.examen.R;
  * A simple {@link Fragment} subclass.
  */
 public class RegistroFragment extends Fragment {
-    EditText editText;
-    EditText editText2;
-    Button Registro;
-    Button atras;
-    MainActivity mainActivity;
-
-
     public RegistroFragment() {
         // Required empty public constructor
     }
@@ -35,25 +28,6 @@ public class RegistroFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v =  inflater.inflate(R.layout.fragment_registro, container, false);
-        mainActivity = (MainActivity) getActivity();
-
-        editText = (EditText) v.findViewById(R.id.editText);
-        editText2 = (EditText) v.findViewById(R.id.editText2);
-        Registro = (Button) v.findViewById(R.id.button);
-        atras = (Button) v.findViewById(R.id.button2);
-        Registro.setOnClickListener(mainActivity.controlador);
-        atras.setOnClickListener(mainActivity.controlador);
-
         return v;
     }
-/*
-    public void registrar(View v) {
-        mainActivity.qbAdmin.registrar(editText.getText().toString(), editText2.getText().toString());
-        mainActivity.cambiarFragment(1);
-    }
-
-    public void atras(View v) {
-        mainActivity.cambiarFragment(0);
-    }
-    */
 }

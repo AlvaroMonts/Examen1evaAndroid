@@ -18,27 +18,29 @@ import java.util.HashMap;
 public class MainActivityController implements View.OnClickListener, View.OnFocusChangeListener, QBAdminListener {
     MainActivity vista;
     Toast toast;
+
     public MainActivityController(MainActivity vista) {
         this.vista = vista;
-        toast = Toast.makeText(this.vista,
-                "El usuario y/o contraseña no son validos", Toast.LENGTH_SHORT);
+        toast = Toast.makeText(this.vista, "El usuario y/o contraseña no son validos", Toast.LENGTH_SHORT);
     }
 
 
     @Override
     public void onClick(View view) {
-        if (view.getId() == vista.fragLog.Login.getId()) {
-            vista.qbAdmin.login(vista.fragLog.editText.getText().toString(), vista.fragLog.editText2.getText().toString());
-            vista.cambiarFragment(0);
-        } else if (vista.fragReg.Registro.isPressed()) {
-            vista.qbAdmin.registrar(vista.fragReg.editText.getText().toString(), vista.fragReg.editText2.getText().toString());
+        if (view.getId() == vista.Login.getId()) {
+            vista.qbAdmin.login(vista.editText.getText().toString(), vista.editText2.getText().toString());
+        } else if (vista.Registro.isPressed()) {
+            vista.qbAdmin.registrar(vista.editText.getText().toString(), vista.editText2.getText().toString());
             vista.cambiarFragment(1);
-        }/* if (vista.cambiarMainActivity) {
+        } else if (vista.atras2.isPressed()) {
+            vista.cambiarFragment(0);
+        } else if (vista.atras.isPressed()) {
+            vista.cambiarFragment(1);
+        }/* else if (vista.cambiarMainActivity) {
             Intent i = new Intent(vista, LogeadoMainActivity.class);
             vista.startActivity(i);
             vista.finish();
         }*/
-
     }
 
     @Override
@@ -49,7 +51,8 @@ public class MainActivityController implements View.OnClickListener, View.OnFocu
     @Override
     public void logeado(boolean bllogeado, QBUser user) {
         if (bllogeado) {
-            vista.cambiarFragment(0);
+            Toast toast2 = Toast.makeText(this.vista, "Deberia cambiar a parte 2", Toast.LENGTH_SHORT);
+            vista.finish();
         } else {
             toast.show();
         }
