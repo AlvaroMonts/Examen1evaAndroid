@@ -39,8 +39,15 @@ public class LoginFragment extends Fragment {
         editText2 = (EditText) v.findViewById(R.id.editText2);
         atras = (Button) v.findViewById(R.id.button2);
         Login = (Button) v.findViewById(R.id.button);
-        Login.setOnClickListener(mainActivity.controlador);
-        atras.setOnClickListener(mainActivity.controlador);
         return v;
+    }
+
+    public void login(View v) {
+        mainActivity.qbAdmin.login(editText.getText().toString(), editText2.getText().toString());
+        mainActivity.cambiarFragment(0);
+    }
+
+    public void atras(View v) {
+        mainActivity.cambiarFragment(1);
     }
 }

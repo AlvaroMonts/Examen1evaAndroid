@@ -58,7 +58,8 @@
         android:layout_marginTop="49dp"
         android:layout_below="@+id/editText"
         android:layout_alignLeft="@+id/editText2"
-        android:layout_alignStart="@+id/editText2" />
+        android:layout_alignStart="@+id/editText2"
+        android:onClick="login" />
 
     <Button
         android:layout_width="wrap_content"
@@ -69,6 +70,7 @@
         android:layout_toRightOf="@+id/button"
         android:layout_toEndOf="@+id/button"
         android:layout_marginLeft="62dp"
-        android:layout_marginStart="62dp" />
+        android:layout_marginStart="62dp"
+        android:onClick="atras" />
 
 </RelativeLayout>

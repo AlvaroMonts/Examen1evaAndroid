@@ -37,12 +37,12 @@ public class MainActivity extends AppCompatActivity {
     public void cambiarFragment(int frag) {
         transaction = fm.beginTransaction();
         if(frag == 0) {
-            // cambiar log - reg
-            //transaction.hide(fragLog);
+            // cambiar log a reg
+            transaction.hide(fragLog);
             transaction.show(fragReg);
         } else if(frag == 1) {
-            // cambiar reg - log
-           // transaction.hide(fragReg);
+            // cambiar reg a log
+            transaction.hide(fragReg);
             transaction.show(fragLog);
         }
         transaction.commit();

@@ -39,9 +39,15 @@ public class RegistroFragment extends Fragment {
         editText2 = (EditText) v.findViewById(R.id.editText2);
         Registro = (Button) v.findViewById(R.id.button);
         atras = (Button) v.findViewById(R.id.button2);
-        Registro.setOnClickListener(mainActivity.controlador);
-        atras.setOnClickListener(mainActivity.controlador);
         return v;
     }
 
+    public void registrar(View v) {
+        mainActivity.qbAdmin.registrar(editText.getText().toString(), editText2.getText().toString());
+        mainActivity.cambiarFragment(1);
+    }
+
+    public void atras(View v) {
+        mainActivity.cambiarFragment(0);
+    }
 }
